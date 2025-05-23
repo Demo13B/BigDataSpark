@@ -32,6 +32,7 @@ services:
       - ./notebooks:/home/jovyan/work
     environment:
       - JUPYTER_ENABLE_LAB=yes
+      - SPARK_CLASSPATH=/home/jovyan/work/jars/postgresql-42.7.3.jar
     depends_on:
       - postgres
       - clickhouse
